@@ -12,10 +12,10 @@
     
     <div ng-controller="myController">
       <ul>
-        <li ng-repeat="fighter in SSB4_Fighters">
+        <li ng-repeat="fighter in SSB4_Fighters | limitTo: 5"> <!-- here -->
         <img ng-src="images/{{ fighter.shortname }}_bros.png" alt="Photo of {{ fighter.name }}">
         <div>
-            <h2>{{ fighter.name }}</h2>
+            <h2>{{ fighter.name | uppercase }}</h2> <!-- and here -->
             <h3>Tier: {{  fighter.tier }}</h3>
         </div>
       </ul>
