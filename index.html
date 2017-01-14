@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="uriel621">
+<html ng-app="SSB4">
 
   <head>
     <script src="lib/angular/angular.min.js"></script>
@@ -12,7 +12,7 @@
     
     <div ng-controller="myController">
       <ul>
-        <li ng-repeat="fighter in SSB4_Fighters | limitTo: 5"> <!-- here -->
+        <li ng-repeat="fighter in SSB4_Fighters | limitTo: 4"> <!-- here -->
         <img ng-src="images/{{ fighter.shortname }}_bros.png" alt="Photo of {{ fighter.name }}">
         <div>
             <h2>{{ fighter.name | uppercase }}</h2> <!-- and here -->
