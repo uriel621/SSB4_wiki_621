@@ -2,51 +2,22 @@
 <html ng-app="SSB4">
 
   <head>
-    <script src="lib/angular/angular.min.js"></script>
+    <script src="library/angular/angular.min.js"></script>
+    <script src="library/angular/angular-route.min.js"></script>
+    
+    <script src="js/script.js"></script>
     <script src="js/controllers.js"></script>
+
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
     <h1>Super Smash Bros</h1>
     
-    <div class="main" ng-controller="myController">
-      <div class="search">
-        <h1>Character Directory</h1>
-        <label>Search:</label>
-        
-        <input ng-model="query" type="text" placeholder="Search for Character" autofocus>
-        
-        <label class="formgroup">By:
-          <select ng-"fighterOrder">
-            <option value="name">Name</option>
-            <option value="tier">tier</option>
-          </select>
-        </label>
-
-        <label class="formgroup">Ascending
-          <input type="radio" ng-model="direction" name="direction" checked>
-        </label>
-        <label class="formgroup">Descending
-          <input type="radio" ng-model="direction" name="direction" value="reverse">
-        </label>
-        
-
-      </div>
-
-
-      <ul class="fighterlist">
-        <li class="fighter cf" ng-repeat="fighter in SSB4_Fighters | filter: query | orderBy: fighterOrder: direction"> 
-        <img ng-src="images/{{ fighter.picname }}_SSB4.png" alt="Photo of {{ fighter.name }}">
-        <div>
-            <h2>{{ fighter.name | uppercase }}</h2> 
-            <h3>Tier: {{  fighter.tier }}</h3>
-        </div>
-      </ul>
+    <div class="main" ng-view>
+      
+      
 
     </div>
   </body>
-  
-  
-
 </html>
