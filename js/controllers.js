@@ -4,6 +4,11 @@ fighterControllers.controller("ListController", ["$scope", "$http", function ($s
   $http.get("js/data.json").success(function(data){
     $scope.SSB4_Fighters = data;
   })
+}]);
 
-  
+fighterControllers.controller("DetailsController", ["$scope", "$http", "$routeParams", function ($scope, $http, $routeParams){
+  $http.get("js/data.json").success(function(data){
+    $scope.SSB4_Fighters = data;
+    $scope.whichItem = $routeParams.itemId;
+  })
 }]);

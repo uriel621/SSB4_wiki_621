@@ -5,8 +5,12 @@ ever.config(["$routeProvider", function($routeProvider){
     when("/list", {
         templateUrl: "views/list.html",
         controller: "ListController"
-    }). 
+    }).
+    when("/details/:itemId", {
+        templateUrl: "views/details.html",
+        controller: "DetailsController"
+    }).  
     otherwise({
         redirectTo: "/list"
-    })
-}])
+    });
+}]);

@@ -1,10 +1,8 @@
 <section class="fighterpage">
     <div class="search">
-        <h1>Character Directory</h1>
-        <label>Search:</label>
-        
+      <h1>Character Directory</h1>
+      <label>Search:</label>
         <input ng-model="query" type="text" placeholder="Search for Character" autofocus>
-        
         <label class="formgroup">By:
           <select ng-"fighterOrder">
             <option value="name">Name</option>
@@ -18,17 +16,18 @@
         <label class="formgroup">Descending
           <input type="radio" ng-model="direction" name="direction" value="reverse">
         </label>
-        
-
-      </div>
+    </div>
 
 
       <ul class="fighterlist">
         <li class="fighter cf" ng-repeat="fighter in SSB4_Fighters | filter: query | orderBy: fighterOrder: direction"> 
-        <img ng-src="images/{{ fighter.picname }}_SSB4.png" alt="Photo of {{ fighter.name }}">
-        <div>
-            <h2>{{ fighter.name | uppercase }}</h2> 
-            <h3>Tier: {{  fighter.tier }}</h3>
-        </div>
+          <a href="#/details/{{ SSB4_Fighters.indexOf(fighter) }}">
+            <img ng-src="images/{{ fighter.picname }}_SSB4.png" alt="Photo of {{ fighter.name }}">
+            <div>
+                <h2>{{ fighter.name | uppercase }}</h2> 
+                <h3>Tier: {{  fighter.tier }}</h3>
+            </div>
+          </a>
+        </li>
       </ul>
 </section>
