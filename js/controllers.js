@@ -6,7 +6,7 @@ fighterControllers.controller("ListController", ["$scope", "$http", function ($s
   })
 }]);
 
-fighterControllers.controller("DetailsController", ["$scope", "$http", "$routeParams", function ($scope, $http, $routeParams){
+fighterControllers.controller("InformationController", ["$scope", "$http", "$routeParams", function ($scope, $http, $routeParams){
   $http.get("js/data.json").success(function(data){
     $scope.SSB4_Fighters = data;
     $scope.whichItem = $routeParams.itemId;

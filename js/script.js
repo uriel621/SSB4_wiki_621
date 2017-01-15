@@ -6,9 +6,9 @@ ever.config(["$routeProvider", function($routeProvider){
         templateUrl: "views/list.html",
         controller: "ListController"
     }).
-    when("/details/:itemId", {
-        templateUrl: "views/details.html",
-        controller: "DetailsController"
+    when("/information/:itemId", {
+        templateUrl: "views/information.html",
+        controller: "InformationController"
     }).  
     otherwise({
         redirectTo: "/list"

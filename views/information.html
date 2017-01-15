@@ -1,0 +1,11 @@
+<section class="fighterinfo">
+    <div class="fighter cf" ng-model="SSB4_Fighters">
+        <h1>{{ SSB4_Fighters[whichItem].name }}</h1>
+        <div class="info">
+            <h3>{{ SSB4_Fighters[whichItem].tier }}</h3>
+            <img ng-src="images/{{ SSB4_Fighters[whichItem].picname }}_SSB4.png" alt="Photo of {{  SSB4_Fighters[whichItem].name }}">
+            <div class="bio">{{ SSB4_Fighters[whichItem].bio }}</div>
+        </div>
+    </div>
+    <a href="index.html">Back to search</a>
+</section>
